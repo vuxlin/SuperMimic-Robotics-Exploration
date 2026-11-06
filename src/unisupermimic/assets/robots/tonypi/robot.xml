@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="tonypi_pro">
+  
+  <compiler angle="radian" autolimits="true" balanceinertia="false" />
+  <option timestep="0.004" integrator="implicitfast" cone="elliptic" impratio="10" />
+
+  <default>
+    <default class="body_servo">
+      
+      
+      <joint damping="0.3184" frictionloss="0.02" armature="0.015" />
+      
+      <position kp="12" dampratio="0.6" forcerange="-1.667 1.667" />
+    </default>
+    <default class="head_servo">
+      
+      <joint damping="0.0168" frictionloss="0.01" armature="0.005" />
+      <position kp="4" dampratio="0.85" forcerange="-0.176 0.176" />
+    </default>
+    <default class="selfcol">
+      
+      <geom group="3" condim="1" friction="0 0 0" mass="0" rgba="0.3 0.6 0.9 0.35" />
+    </default>
+    <default class="collision">
+      
+      
+      <geom group="3" condim="3" friction="0.9 0.005 0.0001" priority="2" rgba="0.8 0.3 0.3 0.6" />
+    </default>
+    <default class="visual">
+      
+      <geom contype="0" conaffinity="0" group="2" density="0" rgba="0.72 0.75 0.78 1" />
+    </default>
+    <default class="internal">
+      <geom type="box" contype="0" conaffinity="0" group="4" rgba="0.5 0.6 0.7 0.45" />
+    </default>
+  </default>
+
+  <asset>
+    <mesh name="head_pan_vis" file="assets/head_pan.stl" scale="0.001 0.001 0.001" />
+    <mesh name="head_tilt_vis" file="assets/head_tilt.stl" scale="0.001 0.001 0.001" />
+    <mesh name="l_ankle_pitch_vis" file="assets/l_ankle_pitch.stl" scale="0.001 0.001 0.001" />
+    <mesh name="l_ankle_roll_vis" file="assets/l_ankle_roll.stl" scale="0.001 0.001 0.001" />
+    <mesh name="l_elbow_vis" file="assets/l_elbow.stl" scale="0.001 0.001 0.001" />
+    <mesh name="l_gripper_vis" file="assets/l_gripper.stl" scale="0.001 0.001 0.001" />
+    <mesh name="l_hip_pitch_vis" file="assets/l_hip_pitch.stl" scale="0.001 0.001 0.001" />
+    <mesh name="l_hip_roll_vis" file="assets/l_hip_roll.stl" scale="0.001 0.001 0.001" />
+    <mesh name="l_knee_vis" file="assets/l_knee.stl" scale="0.001 0.001 0.001" />
+    <mesh name="l_shoulder_pitch_vis" file="assets/l_shoulder_pitch.stl" scale="0.001 0.001 0.001" />
+    <mesh name="l_shoulder_roll_vis" file="assets/l_shoulder_roll.stl" scale="0.001 0.001 0.001" />
+    <mesh name="r_ankle_pitch_vis" file="assets/r_ankle_pitch.stl" scale="0.001 0.001 0.001" />
+    <mesh name="r_ankle_roll_vis" file="assets/r_ankle_roll.stl" scale="0.001 0.001 0.001" />
+    <mesh name="r_elbow_vis" file="assets/r_elbow.stl" scale="0.001 0.001 0.001" />
+    <mesh name="r_gripper_vis" file="assets/r_gripper.stl" scale="0.001 0.001 0.001" />
+    <mesh name="r_hip_pitch_vis" file="assets/r_hip_pitch.stl" scale="0.001 0.001 0.001" />
+    <mesh name="r_hip_roll_vis" file="assets/r_hip_roll.stl" scale="0.001 0.001 0.001" />
+    <mesh name="r_knee_vis" file="assets/r_knee.stl" scale="0.001 0.001 0.001" />
+    <mesh name="r_shoulder_pitch_vis" file="assets/r_shoulder_pitch.stl" scale="0.001 0.001 0.001" />
+    <mesh name="r_shoulder_roll_vis" file="assets/r_shoulder_roll.stl" scale="0.001 0.001 0.001" />
+    <mesh name="torso_vis" file="assets/torso.stl" scale="0.001 0.001 0.001" />
+  </asset>
+
+  <worldbody>
+    <body name="torso" pos="0 0 0">
+      <freejoint name="root" />
+      <site name="imu" pos="0.015303 0.049499 0.281455" size="0.005" rgba="1 0 0 1" />
+      <geom name="torso_vis" class="visual" type="mesh" mesh="torso_vis" />
+      <geom name="r_hip_roll_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="-0.032448 0.000169 0.230533" quat="-0.500000 0.500000 0.500000 -0.500000" mass="0.057000" />  
+      <geom name="r_shoulder_pitch_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="-0.040146 -0.000541 0.287918" quat="0.707107 -0.707107 0.000000 0.000000" mass="0.057000" />  
+      <geom name="l_hip_roll_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="0.032448 0.000169 0.230533" quat="-0.500000 0.500000 0.500000 -0.500000" mass="0.057000" />  
+      <geom name="l_shoulder_pitch_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="0.040146 -0.000541 0.287918" quat="0.707107 -0.707107 0.000000 0.000000" mass="0.057000" />  
+      <geom name="head_pan_servo" class="internal" type="box" size="0.011150 0.006000 0.011600" pos="0.000000 -0.003686 0.320458" mass="0.014000" />  
+      <geom name="torso_battery" class="internal" type="box" size="0.035237 0.009404 0.028451" pos="0.015376 0.056533 0.278410" mass="0.148000" />
+      <geom name="torso_raspberry_pi5" class="internal" type="box" size="0.047813 0.005315 0.031500" pos="0.005306 0.038377 0.281451" mass="0.046000" />
+      <geom name="torso_expansion_board" class="internal" type="box" size="0.037815 0.016438 0.031504" pos="0.015303 0.049499 0.281455" mass="0.055000" />
+      <geom name="torso_fasteners" class="internal" type="box" size="0.044163 0.012649 0.028770" pos="0.000826 0.040641 0.285542" mass="0.072173" />
+      <geom name="torso_structure" class="internal" type="box" size="0.064364 0.058239 0.069635" pos="-0.000007 0.009281 0.274876" mass="0.065424" />
+      <geom name="torso_col" class="selfcol" type="box" size="0.052364 0.046239 0.057635" pos="-0.000007 0.009281 0.274876" mass="0" />
+      <body name="head_pan" pos="0.000000 -0.003686 0.320458">
+        <geom name="head_pan_vis" class="visual" type="mesh" mesh="head_pan_vis" />
+        <geom name="head_tilt_servo" class="internal" type="box" size="0.011600 0.011150 0.006000" pos="0.000000 -0.005714 0.027142" mass="0.014000" />  
+        <geom name="head_pan_fasteners" class="internal" type="box" size="0.022342 0.020534 0.012238" pos="0.000049 0.000483 -0.009023" mass="0.001885" />
+        <geom name="head_pan_structure" class="internal" type="box" size="0.025794 0.035295 0.057140" pos="0.000000 0.001453 0.004645" mass="0.007691" />
+        <geom name="head_pan_col" class="selfcol" type="capsule" fromto="0.000000 0.001453 -0.021951 0.000000 0.001453 0.031239" size="0.018544" mass="0" />
+        <body name="head_tilt" pos="0.000000 -0.005714 0.027142">
+          <geom name="head_tilt_vis" class="visual" type="mesh" mesh="head_tilt_vis" />
+          <geom name="head_tilt_fasteners" class="internal" type="box" size="0.025063 0.017180 0.014954" pos="0.001739 -0.009781 0.013842" mass="0.001484" />
+          <geom name="head_tilt_structure" class="internal" type="box" size="0.023771 0.032727 0.025809" pos="-0.000200 -0.001196 0.013793" mass="0.005202" />
+          <geom name="head_tilt_col" class="selfcol" type="capsule" fromto="-0.000200 -0.009132 0.013793 -0.000200 0.006741 0.013793" size="0.012790" mass="0" />
+        </body>
+      </body>
+      <body name="r_hip_roll" pos="-0.032809 -0.000299 0.222746">
+        <joint name="r_hip_roll" class="body_servo" axis="0 1 0" range="-1.0123 2.1817" />
+        <geom name="r_hip_roll_vis" class="visual" type="mesh" mesh="l_hip_roll_vis" />
+        <geom name="r_hip_pitch_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="-0.000898 -0.003117 -0.054136" quat="0.555570 -0.831470 0.000000 0.000000" mass="0.057000" />  
+        <geom name="r_hip_roll_fasteners" class="internal" type="box" size="0.029687 0.029688 0.038242" pos="-0.000250 0.002591 -0.002677" mass="0.004744" />
+        <geom name="r_hip_roll_structure" class="internal" type="box" size="0.028890 0.029880 0.045693" pos="-0.000991 0.000000 -0.011805" mass="0.013704" />
+        <geom name="r_hip_roll_col" class="selfcol" type="capsule" fromto="-0.000991 0.000000 -0.028113 -0.000991 0.000000 0.004504" size="0.026385" mass="0" />
+        <body name="r_hip_pitch" pos="0.000000 0.000001 -0.046500">
+          <joint name="r_hip_pitch" class="body_servo" axis="1 0 0" range="-1.0849 1.9897" />
+          <geom name="r_hip_pitch_vis" class="visual" type="mesh" mesh="l_hip_pitch_vis" />
+          <geom name="r_knee_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="-0.000898 -0.006358 -0.053536" quat="-0.375416 0.926857 0.000000 0.000000" mass="0.057000" />  
+          <geom name="r_hip_pitch_fasteners" class="internal" type="box" size="0.029688 0.018653 0.031842" pos="0.003211 -0.004920 -0.026275" mass="0.004928" />
+          <geom name="r_hip_pitch_structure" class="internal" type="box" size="0.026808 0.025929 0.045873" pos="0.000000 -0.007780 -0.030895" mass="0.013418" />
+          <geom name="r_hip_pitch_col" class="selfcol" type="capsule" fromto="0.000000 -0.007780 -0.050401 0.000000 -0.007780 -0.011390" size="0.023368" mass="0" />
+          <body name="r_knee" pos="0.000014 -0.000018 -0.059097">
+            <joint name="r_knee" class="body_servo" axis="1 0 0" range="-2.0944 2.1817" />
+            <geom name="r_knee_vis" class="visual" type="mesh" mesh="l_knee_vis" />
+            <geom name="r_ankle_pitch_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="0.000323 -0.000360 -0.050244" quat="0.707107 -0.707107 0.000000 0.000000" mass="0.057000" />  
+            <geom name="r_knee_fasteners" class="internal" type="box" size="0.029688 0.011213 0.029436" pos="-0.000434 0.000513 -0.027234" mass="0.003875" />
+            <geom name="r_knee_structure" class="internal" type="box" size="0.032880 0.021114 0.042967" pos="-0.000000 -0.001691 -0.028566" mass="0.012016" />
+            <geom name="r_knee_col" class="selfcol" type="capsule" fromto="-0.000000 -0.001691 -0.044536 -0.000000 -0.001691 -0.012595" size="0.023997" mass="0" />
+            <body name="r_ankle_pitch" pos="-0.000151 -0.000002 -0.058063">
+              <joint name="r_ankle_pitch" class="body_servo" axis="1 0 0" range="-1.4242 1.9687" />
+              <geom name="r_ankle_pitch_vis" class="visual" type="mesh" mesh="l_ankle_pitch_vis" />
+              <geom name="r_ankle_roll_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="-0.005613 0.003625 -0.046035" quat="0.000000 0.707107 0.707107 0.000000" mass="0.057000" />  
+              <geom name="r_ankle_pitch_fasteners" class="internal" type="box" size="0.029688 0.029688 0.021717" pos="-0.001718 0.000759 -0.016279" mass="0.002704" />
+              <geom name="r_ankle_pitch_structure" class="internal" type="box" size="0.031918 0.028890 0.034853" pos="-0.002038 0.000991 -0.023533" mass="0.020926" />
+              <geom name="r_ankle_pitch_col" class="selfcol" type="capsule" fromto="-0.002038 0.000991 -0.027982 -0.002038 0.000991 -0.019083" size="0.027404" mass="0" />
+              <body name="r_ankle_roll" pos="0.000001 0.000001 -0.046500">
+                <joint name="r_ankle_roll" class="body_servo" axis="0 1 0" range="-2.1817 2.1817" />
+                <geom name="r_ankle_roll_vis" class="visual" type="mesh" mesh="l_ankle_roll_vis" />
+                <geom name="r_ankle_roll_fasteners" class="internal" type="box" size="0.020313 0.029688 0.006911" pos="-0.004838 0.002019 -0.004079" mass="0.002710" />
+                
+                <site name="r_ankle_roll_site" type="box" size="0.041252 0.057000 0.003501" pos="-0.016307 0.005983 -0.015000" rgba="0 1 0 0.25" />
+                <geom name="r_ankle_roll_sole" class="collision" type="box" size="0.039252 0.055000 0.000501" pos="-0.016307 0.005983 -0.013000" mass="0.032247" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="r_shoulder_pitch" pos="-0.050130 -0.000188 0.294872">
+        <joint name="r_shoulder_pitch" class="body_servo" axis="1 0 0" range="-3.0369 1.0221" />
+        <geom name="r_shoulder_pitch_vis" class="visual" type="mesh" mesh="l_shoulder_pitch_vis" />
+        <geom name="r_shoulder_roll_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="-0.035593 -0.000920 -0.006502" quat="0.534873 -0.462505 -0.462505 0.534873" mass="0.057000" />  
+        <geom name="r_shoulder_pitch_fasteners" class="internal" type="box" size="0.036101 0.029383 0.025538" pos="-0.007349 0.000941 -0.001132" mass="0.005024" />
+        <geom name="r_shoulder_pitch_structure" class="internal" type="box" size="0.045450 0.032876 0.032058" pos="-0.002329 0.000002 -0.009930" mass="0.014257" />
+        <geom name="r_shoulder_pitch_col" class="selfcol" type="capsule" fromto="-0.015312 0.000002 -0.009930 0.010655 0.000002 -0.009930" size="0.020467" mass="0" />
+        <body name="r_shoulder_roll" pos="-0.033393 -0.000003 0.000908">
+          <joint name="r_shoulder_roll" class="body_servo" axis="0 -1 0" range="-2.8274 1.7628" />
+          <geom name="r_shoulder_roll_vis" class="visual" type="mesh" mesh="l_shoulder_roll_vis" />
+          <geom name="r_elbow_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="-0.008790 0.000609 -0.065213" quat="0.500436 -0.499563 -0.499563 0.500436" mass="0.057000" />  
+          <geom name="r_shoulder_roll_fasteners" class="internal" type="box" size="0.013041 0.029254 0.031034" pos="-0.005352 0.000710 -0.028540" mass="0.004068" />
+          <geom name="r_shoulder_roll_structure" class="internal" type="box" size="0.018424 0.032881 0.042347" pos="-0.005698 0.000141 -0.027328" mass="0.015044" />
+          <geom name="r_shoulder_roll_col" class="selfcol" type="capsule" fromto="-0.005698 0.000141 -0.044023 -0.005698 0.000141 -0.010633" size="0.013652" mass="0" />
+          <body name="r_elbow" pos="-0.008385 0.000141 -0.057419">
+            <joint name="r_elbow" class="body_servo" axis="0 -1 0" range="-2.1817 1.9897" />
+            <geom name="r_elbow_vis" class="visual" type="mesh" mesh="l_elbow_vis" />
+            <geom name="r_gripper_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="0.000377 0.000555 -0.052886" quat="0.500436 -0.499563 -0.499563 0.500436" mass="0.057000" />  
+            <geom name="r_elbow_fasteners" class="internal" type="box" size="0.010417 0.029188 0.031168" pos="0.001162 0.003350 -0.032993" mass="0.004749" />
+            <geom name="r_elbow_structure" class="internal" type="box" size="0.018418 0.025804 0.043858" pos="-0.000013 0.000093 -0.030335" mass="0.002849" />
+            <geom name="r_elbow_col" class="selfcol" type="capsule" fromto="-0.000013 0.000093 -0.052081 -0.000013 0.000093 -0.008588" size="0.010111" mass="0" />
+            <body name="r_gripper" pos="-0.000015 0.000091 -0.060696">
+              <geom name="r_gripper_vis" class="visual" type="mesh" mesh="l_gripper_vis" />
+              <geom name="r_gripper_fasteners" class="internal" type="box" size="0.008748 0.028702 0.004803" pos="-0.001345 0.000328 -0.005878" mass="0.001185" />
+              <geom name="r_gripper_structure" class="internal" type="box" size="0.031931 0.030429 0.035306" pos="0.014643 0.001499 -0.004517" mass="0.011908" />
+              <geom name="r_gripper_col" class="selfcol" type="capsule" fromto="0.014643 0.001499 -0.063643 0.014643 0.001499 -0.000391" size="0.011180" mass="0" />  
+              
+              
+              <geom name="r_gripper_pad1" class="collision" type="sphere" size="0.009" pos="0.022643 0.007499 -0.063643" mass="0" />
+              <geom name="r_gripper_pad2" class="collision" type="sphere" size="0.009" pos="0.006643 0.007499 -0.063643" mass="0" />
+              <geom name="r_gripper_pad3" class="collision" type="sphere" size="0.009" pos="0.014643 -0.008501 -0.063643" mass="0" />
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="l_hip_roll" pos="0.032809 -0.000299 0.222746">
+        <joint name="l_hip_roll" class="body_servo" axis="0 1 0" range="-2.1817 1.0123" />
+        <geom name="l_hip_roll_vis" class="visual" type="mesh" mesh="r_hip_roll_vis" />
+        <geom name="l_hip_pitch_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="0.000898 -0.003117 -0.054136" quat="0.555570 -0.831470 0.000000 0.000000" mass="0.057000" />  
+        <geom name="l_hip_roll_fasteners" class="internal" type="box" size="0.029687 0.029688 0.038242" pos="0.000360 0.002591 -0.002677" mass="0.004744" />
+        <geom name="l_hip_roll_structure" class="internal" type="box" size="0.028890 0.029880 0.045693" pos="0.000991 0.000000 -0.011805" mass="0.013704" />
+        <geom name="l_hip_roll_col" class="selfcol" type="capsule" fromto="0.000991 0.000000 -0.028113 0.000991 0.000000 0.004504" size="0.026385" mass="0" />
+        <body name="l_hip_pitch" pos="0.000000 0.000001 -0.046500">
+          <joint name="l_hip_pitch" class="body_servo" axis="1 0 0" range="-1.0849 1.9897" />
+          <geom name="l_hip_pitch_vis" class="visual" type="mesh" mesh="r_hip_pitch_vis" />
+          <geom name="l_knee_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="0.000898 -0.006358 -0.053536" quat="-0.375416 0.926857 0.000000 0.000000" mass="0.057000" />  
+          <geom name="l_hip_pitch_fasteners" class="internal" type="box" size="0.029688 0.018653 0.031842" pos="-0.003211 -0.004920 -0.026275" mass="0.004928" />
+          <geom name="l_hip_pitch_structure" class="internal" type="box" size="0.026808 0.025929 0.045873" pos="0.000000 -0.007780 -0.030895" mass="0.013418" />
+          <geom name="l_hip_pitch_col" class="selfcol" type="capsule" fromto="0.000000 -0.007780 -0.050401 0.000000 -0.007780 -0.011390" size="0.023368" mass="0" />
+          <body name="l_knee" pos="-0.000014 -0.000018 -0.059097">
+            <joint name="l_knee" class="body_servo" axis="1 0 0" range="-2.0944 2.1817" />
+            <geom name="l_knee_vis" class="visual" type="mesh" mesh="r_knee_vis" />
+            <geom name="l_ankle_pitch_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="-0.000323 -0.000360 -0.050244" quat="0.707107 -0.707107 0.000000 0.000000" mass="0.057000" />  
+            <geom name="l_knee_fasteners" class="internal" type="box" size="0.029688 0.011213 0.029436" pos="0.000434 0.000513 -0.027234" mass="0.003875" />
+            <geom name="l_knee_structure" class="internal" type="box" size="0.032880 0.021114 0.042967" pos="0.000000 -0.001691 -0.028566" mass="0.012016" />
+            <geom name="l_knee_col" class="selfcol" type="capsule" fromto="0.000000 -0.001691 -0.044536 0.000000 -0.001691 -0.012595" size="0.023997" mass="0" />
+            <body name="l_ankle_pitch" pos="0.000151 -0.000002 -0.058063">
+              <joint name="l_ankle_pitch" class="body_servo" axis="1 0 0" range="-1.4242 1.9687" />
+              <geom name="l_ankle_pitch_vis" class="visual" type="mesh" mesh="r_ankle_pitch_vis" />
+              <geom name="l_ankle_roll_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="0.005613 0.003625 -0.046035" quat="0.707107 -0.000000 -0.000000 0.707107" mass="0.057000" />  
+              <geom name="l_ankle_pitch_fasteners" class="internal" type="box" size="0.029688 0.029688 0.021717" pos="0.001718 0.000759 -0.016279" mass="0.002704" />
+              <geom name="l_ankle_pitch_structure" class="internal" type="box" size="0.031918 0.028890 0.034853" pos="0.002038 0.000991 -0.023533" mass="0.020926" />
+              <geom name="l_ankle_pitch_col" class="selfcol" type="capsule" fromto="0.002038 0.000991 -0.027982 0.002038 0.000991 -0.019083" size="0.027404" mass="0" />
+              <body name="l_ankle_roll" pos="-0.000001 0.000001 -0.046500">
+                <joint name="l_ankle_roll" class="body_servo" axis="0 1 0" range="-2.1817 2.1817" />
+                <geom name="l_ankle_roll_vis" class="visual" type="mesh" mesh="r_ankle_roll_vis" />
+                <geom name="l_ankle_roll_fasteners" class="internal" type="box" size="0.020313 0.029688 0.006911" pos="0.004838 0.002019 -0.004079" mass="0.002710" />
+                
+                <site name="l_ankle_roll_site" type="box" size="0.041252 0.057000 0.003501" pos="0.016307 0.005983 -0.015000" rgba="0 1 0 0.25" />
+                <geom name="l_ankle_roll_sole" class="collision" type="box" size="0.039252 0.055000 0.000501" pos="0.016307 0.005983 -0.013000" mass="0.032247" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <body name="l_shoulder_pitch" pos="0.050130 -0.000188 0.294872">
+        <joint name="l_shoulder_pitch" class="body_servo" axis="1 0 0" range="-3.0369 1.0221" />
+        <geom name="l_shoulder_pitch_vis" class="visual" type="mesh" mesh="r_shoulder_pitch_vis" />
+        <geom name="l_shoulder_roll_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="0.035593 -0.000920 -0.006502" quat="-0.462505 0.534873 0.534873 -0.462505" mass="0.057000" />  
+        <geom name="l_shoulder_pitch_fasteners" class="internal" type="box" size="0.036101 0.031563 0.025538" pos="0.003703 0.005824 -0.002870" mass="0.007244" />
+        <geom name="l_shoulder_pitch_structure" class="internal" type="box" size="0.045450 0.033062 0.032058" pos="0.002329 0.000188 -0.009930" mass="0.014468" />
+        <geom name="l_shoulder_pitch_col" class="selfcol" type="capsule" fromto="-0.010562 0.000188 -0.009930 0.015219 0.000188 -0.009930" size="0.020560" mass="0" />
+        <body name="l_shoulder_roll" pos="0.033393 -0.000003 0.000908">
+          <joint name="l_shoulder_roll" class="body_servo" axis="0 -1 0" range="-1.7628 2.8274" />
+          <geom name="l_shoulder_roll_vis" class="visual" type="mesh" mesh="r_shoulder_roll_vis" />
+          <geom name="l_elbow_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="0.008790 0.000609 -0.065213" quat="-0.499563 0.500436 0.500436 -0.499563" mass="0.057000" />  
+          <geom name="l_shoulder_roll_fasteners" class="internal" type="box" size="0.013041 0.029254 0.031034" pos="0.005352 0.000710 -0.028540" mass="0.004068" />
+          <geom name="l_shoulder_roll_structure" class="internal" type="box" size="0.018424 0.032881 0.042347" pos="0.005698 0.000141 -0.027328" mass="0.015044" />
+          <geom name="l_shoulder_roll_col" class="selfcol" type="capsule" fromto="0.005698 0.000141 -0.044023 0.005698 0.000141 -0.010633" size="0.013652" mass="0" />
+          <body name="l_elbow" pos="0.008385 0.000141 -0.057419">
+            <joint name="l_elbow" class="body_servo" axis="0 -1 0" range="-1.9897 2.1817" />
+            <geom name="l_elbow_vis" class="visual" type="mesh" mesh="r_elbow_vis" />
+            <geom name="l_gripper_servo" class="internal" type="box" size="0.025550 0.020000 0.010070" pos="-0.000377 0.000555 -0.052886" quat="-0.499563 0.500436 0.500436 -0.499563" mass="0.057000" />  
+            <geom name="l_elbow_fasteners" class="internal" type="box" size="0.010417 0.029188 0.031168" pos="-0.001162 0.003350 -0.032993" mass="0.004749" />
+            <geom name="l_elbow_structure" class="internal" type="box" size="0.018418 0.025804 0.043858" pos="0.000013 0.000093 -0.030335" mass="0.002849" />
+            <geom name="l_elbow_col" class="selfcol" type="capsule" fromto="0.000013 0.000093 -0.052081 0.000013 0.000093 -0.008588" size="0.010111" mass="0" />
+            <body name="l_gripper" pos="0.000015 0.000091 -0.060696">
+              <geom name="l_gripper_vis" class="visual" type="mesh" mesh="r_gripper_vis" />
+              <geom name="l_gripper_fasteners" class="internal" type="box" size="0.008748 0.028702 0.004803" pos="0.001345 0.000328 -0.005878" mass="0.001185" />
+              <geom name="l_gripper_structure" class="internal" type="box" size="0.031931 0.030429 0.035306" pos="-0.014643 0.001499 -0.004517" mass="0.011908" />
+              <geom name="l_gripper_col" class="selfcol" type="capsule" fromto="-0.014643 0.001499 -0.063643 -0.014643 0.001499 -0.000391" size="0.011180" mass="0" />  
+              
+              <geom name="l_gripper_pad1" class="collision" type="sphere" size="0.009" pos="-0.022643 0.007499 -0.063643" mass="0" />
+              <geom name="l_gripper_pad2" class="collision" type="sphere" size="0.009" pos="-0.006643 0.007499 -0.063643" mass="0" />
+              <geom name="l_gripper_pad3" class="collision" type="sphere" size="0.009" pos="-0.014643 -0.008501 -0.063643" mass="0" />
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+
+  <contact>
+    
+    <exclude body1="torso" body2="head_pan" />
+    <exclude body1="head_pan" body2="head_tilt" />
+    <exclude body1="r_knee" body2="r_ankle_pitch" />
+    <exclude body1="r_ankle_pitch" body2="r_ankle_roll" />
+    <exclude body1="r_shoulder_roll" body2="r_elbow" />
+    <exclude body1="r_elbow" body2="r_gripper" />
+    <exclude body1="r_hip_roll" body2="r_hip_pitch" />
+    <exclude body1="torso" body2="r_hip_roll" />
+    <exclude body1="r_hip_pitch" body2="r_knee" />
+    <exclude body1="torso" body2="r_shoulder_pitch" />
+    <exclude body1="r_shoulder_pitch" body2="r_shoulder_roll" />
+    <exclude body1="l_knee" body2="l_ankle_pitch" />
+    <exclude body1="l_ankle_pitch" body2="l_ankle_roll" />
+    <exclude body1="l_shoulder_roll" body2="l_elbow" />
+    <exclude body1="l_elbow" body2="l_gripper" />
+    <exclude body1="l_hip_roll" body2="l_hip_pitch" />
+    <exclude body1="torso" body2="l_hip_roll" />
+    <exclude body1="l_hip_pitch" body2="l_knee" />
+    <exclude body1="torso" body2="l_shoulder_pitch" />
+    <exclude body1="l_shoulder_pitch" body2="l_shoulder_roll" />
+    <exclude body1="head_pan" body2="r_shoulder_pitch" />  
+    <exclude body1="head_pan" body2="l_shoulder_pitch" />  
+
+    
+    <pair geom1="r_ankle_roll_sole" geom2="l_ankle_roll_sole" condim="1" solref="0.04 1" margin="0.0" gap="0.0" />
+  </contact>
+
+  <actuator>
+    <position name="r_hip_roll" joint="r_hip_roll" class="body_servo" kp="64" ctrlrange="-1.0123 2.1817" />  
+    
+    <position name="r_hip_pitch" joint="r_hip_pitch" class="body_servo" ctrlrange="-1.0849 1.9897" />  
+    <position name="r_knee" joint="r_knee" class="body_servo" ctrlrange="-2.0944 2.1817" />  
+    <position name="r_ankle_pitch" joint="r_ankle_pitch" class="body_servo" ctrlrange="-1.4242 1.9687" />  
+    <position name="r_ankle_roll" joint="r_ankle_roll" class="body_servo" kp="64" ctrlrange="-2.1817 2.1817" />  
+    <position name="r_shoulder_pitch" joint="r_shoulder_pitch" class="body_servo" ctrlrange="-3.0369 1.0221" />  
+    <position name="r_shoulder_roll" joint="r_shoulder_roll" class="body_servo" ctrlrange="-2.8274 1.7628" />  
+    <position name="r_elbow" joint="r_elbow" class="body_servo" ctrlrange="-2.1817 1.9897" />  
+    <position name="l_hip_roll" joint="l_hip_roll" class="body_servo" kp="64" ctrlrange="-2.1817 1.0123" />  
+    <position name="l_hip_pitch" joint="l_hip_pitch" class="body_servo" ctrlrange="-1.0849 1.9897" />  
+    <position name="l_knee" joint="l_knee" class="body_servo" ctrlrange="-2.0944 2.1817" />  
+    <position name="l_ankle_pitch" joint="l_ankle_pitch" class="body_servo" ctrlrange="-1.4242 1.9687" />  
+    <position name="l_ankle_roll" joint="l_ankle_roll" class="body_servo" kp="64" ctrlrange="-2.1817 2.1817" />  
+    <position name="l_shoulder_pitch" joint="l_shoulder_pitch" class="body_servo" ctrlrange="-3.0369 1.0221" />  
+    <position name="l_shoulder_roll" joint="l_shoulder_roll" class="body_servo" ctrlrange="-1.7628 2.8274" />  
+    <position name="l_elbow" joint="l_elbow" class="body_servo" ctrlrange="-1.9897 2.1817" />  
+    </actuator>
+
+  <sensor>
+    <framequat name="imu_quat" objtype="site" objname="imu" />
+    <gyro name="imu_gyro" site="imu" />
+    <accelerometer name="imu_acc" site="imu" />
+    <jointpos name="r_hip_roll_p" joint="r_hip_roll" />
+    <jointpos name="r_hip_pitch_p" joint="r_hip_pitch" />
+    <jointpos name="r_knee_p" joint="r_knee" />
+    <jointpos name="r_ankle_pitch_p" joint="r_ankle_pitch" />
+    <jointpos name="r_ankle_roll_p" joint="r_ankle_roll" />
+    <jointpos name="r_shoulder_pitch_p" joint="r_shoulder_pitch" />
+    <jointpos name="r_shoulder_roll_p" joint="r_shoulder_roll" />
+    <jointpos name="r_elbow_p" joint="r_elbow" />
+    <jointpos name="l_hip_roll_p" joint="l_hip_roll" />
+    <jointpos name="l_hip_pitch_p" joint="l_hip_pitch" />
+    <jointpos name="l_knee_p" joint="l_knee" />
+    <jointpos name="l_ankle_pitch_p" joint="l_ankle_pitch" />
+    <jointpos name="l_ankle_roll_p" joint="l_ankle_roll" />
+    <jointpos name="l_shoulder_pitch_p" joint="l_shoulder_pitch" />
+    <jointpos name="l_shoulder_roll_p" joint="l_shoulder_roll" />
+    <jointpos name="l_elbow_p" joint="l_elbow" />
+    <jointvel name="r_hip_roll_v" joint="r_hip_roll" />
+    <jointvel name="r_hip_pitch_v" joint="r_hip_pitch" />
+    <jointvel name="r_knee_v" joint="r_knee" />
+    <jointvel name="r_ankle_pitch_v" joint="r_ankle_pitch" />
+    <jointvel name="r_ankle_roll_v" joint="r_ankle_roll" />
+    <jointvel name="r_shoulder_pitch_v" joint="r_shoulder_pitch" />
+    <jointvel name="r_shoulder_roll_v" joint="r_shoulder_roll" />
+    <jointvel name="r_elbow_v" joint="r_elbow" />
+    <jointvel name="l_hip_roll_v" joint="l_hip_roll" />
+    <jointvel name="l_hip_pitch_v" joint="l_hip_pitch" />
+    <jointvel name="l_knee_v" joint="l_knee" />
+    <jointvel name="l_ankle_pitch_v" joint="l_ankle_pitch" />
+    <jointvel name="l_ankle_roll_v" joint="l_ankle_roll" />
+    <jointvel name="l_shoulder_pitch_v" joint="l_shoulder_pitch" />
+    <jointvel name="l_shoulder_roll_v" joint="l_shoulder_roll" />
+    <jointvel name="l_elbow_v" joint="l_elbow" />
+    <touch name="r_ankle_roll_touch" site="r_ankle_roll_site" />
+    <touch name="l_ankle_roll_touch" site="l_ankle_roll_site" />
+  </sensor>
+
+  <keyframe>
+    <key name="home" qpos="0.0 0.0 0.000715 1.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0" ctrl="0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0" />
+    
+    <key name="prone" qpos="7e-06 -0.002845 0.048721 0.694251 0.719732 6.3e-05 -2.3e-05 0.000116 0.024596 0.018948 0.009625 0.000792 -0.010762 2.2e-05 -5e-06 -0.000159 0.024634 0.018971 0.009634 -0.00086 -0.010775 -2.4e-05 4e-06" ctrl="0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0" />
+    
+    <key name="supine" qpos="5e-06 0.002121 0.061606 0.700387 -0.713763 4.6e-05 4e-05 9e-05 -0.020592 -0.014773 -0.005303 0.001149 0.010752 7e-06 -2e-06 -0.000161 -0.020623 -0.0148 -0.005328 -0.001232 0.010766 -1e-05 1e-06" ctrl="0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0" />
+  <key name="stand" qpos="-0.0009768787125278993 -0.006365094220654778 -0.01835475223914109 0.999895980703409 0.013228045119015359 -0.004904950860986393 0.0029980080968818688 0.028746708631733127 -0.7811889728852173 1.1040688957990337 -0.35059588356956256 0.002972646412584089 0.25249205696898286 0.2920059883103311 -0.3142774208619077 -0.0020991075354709885 -0.7563127319545233 1.1121744066406232 -0.3849503844767196 0.01875064648857445 0.2566046361638208 -0.29657327118856713 0.38103031547881133" ctrl="0.033510321638291124 -0.7833037682950551 1.059763921810957 -0.37280232822598874 0.008377580409572781 0.2555162024919698 0.29321531433504733 -0.3141592653589793 -0.0 -0.7707373976806959 1.0974630336540343 -0.39793506945470714 0.020943951023931952 0.25970499269675623 -0.29740410453983374 0.38117990863556156" /></keyframe>
+</mujoco>

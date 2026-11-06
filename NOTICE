@@ -1,0 +1,24 @@
+UniSuperMimic
+Copyright 2026 UniSuperMimic Authors
+
+This repository provides a downstream SuperMimic implementation for UniLab.
+UniLab and UniSim are separate upstream projects licensed under Apache-2.0.
+
+The implementation was developed with reference to the SuperMimic reference
+code in supermimic_vibed, whose MIT license and original copyright notice are
+preserved in LICENSES/MIT-supermimic.txt. The BONES-SEED data pipeline was
+adapted from SuperMimic-Reproduced; its MIT license and copyright notice are
+preserved in LICENSES/MIT-supermimic-reproduced.txt.
+
+SuperMimic paper:
+"SuperMimic: Scaling Humanoid Whole-Body Control with One Differentiable
+World Model", Qiayuan Liao et al., https://supermimic.github.io
+
+Downstream robotics exploration snapshot
+
+This local project records G1 baseline experiments, RP1/TonyPi task adaptations,
+continuous TonyPi reference preparation, and evaluation/visualization work.
+It is based on https://github.com/Motphys/Uni-SuperMimic.
+TonyPi simulation/control source: https://github.com/pab47/TonyPi; its MIT
+license is preserved in LICENSES/MIT-TonyPi.txt. External assets retain their
+respective terms. No upstream authorship or hardware-transfer claim is implied.

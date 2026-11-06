@@ -1,0 +1,228 @@
+{
+  "iteration": 2000,
+  "checkpoint": "/workspace/Uni-SuperMimic-main/runs/tonypi_v2_sequences_gpu1_001/ckpt_002000.pt",
+  "checkpoint_sha256": "2944892e4fece1cf933aef6353a4425645fcc322dc72c2d921f2cef4f488d34d",
+  "robot": "tonypi",
+  "clips": 399,
+  "backend": "mjwarp",
+  "observation_noise": false,
+  "action_noise": false,
+  "seed": 0,
+  "control_fps": 50,
+  "quaternion_order": "wxyz",
+  "joint_names": [
+    "l_ankle_roll",
+    "l_ankle_pitch",
+    "l_knee",
+    "l_hip_pitch",
+    "l_hip_roll",
+    "l_elbow",
+    "l_shoulder_roll",
+    "l_shoulder_pitch",
+    "r_ankle_roll",
+    "r_ankle_pitch",
+    "r_knee",
+    "r_hip_pitch",
+    "r_hip_roll",
+    "r_elbow",
+    "r_shoulder_roll",
+    "r_shoulder_pitch"
+  ],
+  "elapsed_seconds": 469.02449143794365,
+  "items": [
+    {
+      "name": "train_sequence_0000",
+      "iteration": 2000,
+      "split": "train",
+      "stage": "continuous_sequence",
+      "kind": "upright",
+      "family": "mixed",
+      "events": [
+        {
+          "action": "catch_ball_up",
+          "start_seconds": 0.0,
+          "end_seconds": 4.7,
+          "amplitude": 0.3352570710630385,
+          "tempo": 1.0
+        },
+        {
+          "action": "stand",
+          "start_seconds": 4.7,
+          "end_seconds": 5.604,
+          "amplitude": 0.3352570710630385,
+          "tempo": 1.0
+        },
+        {
+          "action": "@hold",
+          "start_seconds": 5.604,
+          "end_seconds": 5.86,
+          "amplitude": 0.3352570710630385,
+          "tempo": 1.0
+        },
+        {
+          "action": "grab_left",
+          "start_seconds": 5.86,
+          "end_seconds": 10.06,
+          "amplitude": 0.4470094280840513,
+          "tempo": 1.0
+        },
+        {
+          "action": "stand",
+          "start_seconds": 10.06,
+          "end_seconds": 10.764,
+          "amplitude": 0.4470094280840513,
+          "tempo": 1.0
+        },
+        {
+          "action": "@hold",
+          "start_seconds": 10.764,
+          "end_seconds": 11.084,
+          "amplitude": 0.4470094280840513,
+          "tempo": 1.0
+        },
+        {
+          "action": "wing_chun",
+          "start_seconds": 11.084,
+          "end_seconds": 12.988,
+          "amplitude": 1.0,
+          "tempo": 1.12
+        },
+        {
+          "action": "stand",
+          "start_seconds": 12.988,
+          "end_seconds": 14.068,
+          "amplitude": 1.0,
+          "tempo": 1.12
+        },
+        {
+          "action": "@hold",
+          "start_seconds": 14.068,
+          "end_seconds": 14.204,
+          "amplitude": 1.0,
+          "tempo": 1.12
+        },
+        {
+          "action": "move_up",
+          "start_seconds": 14.204,
+          "end_seconds": 21.492,
+          "amplitude": 0.38315093835775815,
+          "tempo": 0.9
+        },
+        {
+          "action": "put_down2",
+          "start_seconds": 21.492,
+          "end_seconds": 25.536,
+          "amplitude": 0.38315093835775815,
+          "tempo": 0.9
+        },
+        {
+          "action": "stand",
+          "start_seconds": 25.536,
+          "end_seconds": 26.484,
+          "amplitude": 0.38315093835775815,
+          "tempo": 0.9
+        },
+        {
+          "action": "@hold",
+          "start_seconds": 26.484,
+          "end_seconds": 26.804,
+          "amplitude": 0.38315093835775815,
+          "tempo": 0.9
+        },
+        {
+          "action": "twist",
+          "start_seconds": 26.804,
+          "end_seconds": 29.864,
+          "amplitude": 0.35,
+          "tempo": 0.9
+        },
+        {
+          "action": "stand",
+          "start_seconds": 29.864,
+          "end_seconds": 31.04,
+          "amplitude": 0.35,
+          "tempo": 0.9
+        },
+        {
+          "action": "@hold",
+          "start_seconds": 31.04,
+          "end_seconds": 31.268,
+          "amplitude": 0.35,
+          "tempo": 0.9
+        },
+        {
+          "action": "grab_left",
+          "start_seconds": 31.268,
+          "end_seconds": 35.04,
+          "amplitude": 0.3576075424672411,
+          "tempo": 0.9
+        },
+        {
+          "action": "stand",
+          "start_seconds": 35.04,
+          "end_seconds": 36.168,
+          "amplitude": 0.3576075424672411,
+          "tempo": 0.9
+        },
+        {
+          "action": "@hold",
+          "start_seconds": 36.168,
+          "end_seconds": 36.448,
+          "amplitude": 0.3576075424672411,
+          "tempo": 0.9
+        },
+        {
+          "action": "go_forward_start",
+          "start_seconds": 36.448,
+          "end_seconds": 37.424,
+          "amplitude": 0.8940188561681028,
+          "tempo": 0.9
+        },
+        {
+          "action": "stand",
+          "start_seconds": 37.424,
+          "end_seconds": 38.672,
+          "amplitude": 0.8940188561681028,
+          "tempo": 0.9
+        },
+        {
+          "action": "@hold",
+          "start_seconds": 38.672,
+          "end_seconds": 38.948,
+          "amplitude": 0.8940188561681028,
+          "tempo": 0.9
+        },
+        {
+          "action": "turn_left_small_step_a",
+          "start_seconds": 38.948,
+          "end_seconds": 39.9,
+          "amplitude": 1.0,
+          "tempo": 1.12
+        },
+        {
+          "action": "stand",
+          "start_seconds": 39.9,
+          "end_seconds": 41.144,
+          "amplitude": 1.0,
+          "tempo": 1.12
+        },
+        {
+          "action": "@hold",
+          "start_seconds": 41.144,
+          "end_seconds": 41.452,
+          "amplitude": 1.0,
+          "tempo": 1.12
+        }
+      ],
+      "frames": 2073,
+      "target_frames": 2073,
+      "executed_seconds": 41.44,
+      "target_seconds": 41.44,
+      "failed": false,
+      "norm_return": 0.9961673617362976,
+      "joint_rmse_deg": 2.28885817527771,
+      "root_xy_mean_m": 0.004509857390075922,
+      "root_xy_final_m": 0.005678530316799879
+    }
+  ]
+}

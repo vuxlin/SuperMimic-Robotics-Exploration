@@ -1,0 +1,219 @@
+{
+  "norm_return": 0.8435911536216736,
+  "norm_return_framew": 0.8483662605285645,
+  "n_failed": 0,
+  "failed": [],
+  "per_clip": {
+    "dance1_subject1": {
+      "norm_return": 0.8416147232055664,
+      "steps": 6573,
+      "failed": false
+    },
+    "dance1_subject2": {
+      "norm_return": 0.8315298557281494,
+      "steps": 6573,
+      "failed": false
+    },
+    "dance1_subject3": {
+      "norm_return": 0.915319561958313,
+      "steps": 6573,
+      "failed": false
+    },
+    "dance2_subject1": {
+      "norm_return": 0.8114029765129089,
+      "steps": 11283,
+      "failed": false
+    },
+    "dance2_subject2": {
+      "norm_return": 0.8675171136856079,
+      "steps": 11283,
+      "failed": false
+    },
+    "dance2_subject3": {
+      "norm_return": 0.8851271271705627,
+      "steps": 11283,
+      "failed": false
+    },
+    "dance2_subject4": {
+      "norm_return": 0.8320469260215759,
+      "steps": 11283,
+      "failed": false
+    },
+    "dance2_subject5": {
+      "norm_return": 0.8852285146713257,
+      "steps": 11283,
+      "failed": false
+    },
+    "fallAndGetUp1_subject1": {
+      "norm_return": 0.7118960618972778,
+      "steps": 8410,
+      "failed": false
+    },
+    "fallAndGetUp1_subject4": {
+      "norm_return": 0.6979653835296631,
+      "steps": 8410,
+      "failed": false
+    },
+    "fallAndGetUp1_subject5": {
+      "norm_return": 0.7248847484588623,
+      "steps": 8410,
+      "failed": false
+    },
+    "fallAndGetUp2_subject2": {
+      "norm_return": 0.7219970226287842,
+      "steps": 8195,
+      "failed": false
+    },
+    "fallAndGetUp2_subject3": {
+      "norm_return": 0.712902843952179,
+      "steps": 8195,
+      "failed": false
+    },
+    "fallAndGetUp3_subject1": {
+      "norm_return": 0.800672709941864,
+      "steps": 5108,
+      "failed": false
+    },
+    "fight1_subject2": {
+      "norm_return": 0.8399704694747925,
+      "steps": 12243,
+      "failed": false
+    },
+    "fight1_subject3": {
+      "norm_return": 0.8256935477256775,
+      "steps": 12243,
+      "failed": false
+    },
+    "fight1_subject5": {
+      "norm_return": 0.880686342716217,
+      "steps": 12243,
+      "failed": false
+    },
+    "fightAndSports1_subject1": {
+      "norm_return": 0.812915027141571,
+      "steps": 12257,
+      "failed": false
+    },
+    "fightAndSports1_subject4": {
+      "norm_return": 0.8564298748970032,
+      "steps": 12257,
+      "failed": false
+    },
+    "jumps1_subject1": {
+      "norm_return": 0.8410855531692505,
+      "steps": 12222,
+      "failed": false
+    },
+    "jumps1_subject2": {
+      "norm_return": 0.7843816876411438,
+      "steps": 12222,
+      "failed": false
+    },
+    "jumps1_subject5": {
+      "norm_return": 0.853151798248291,
+      "steps": 12222,
+      "failed": false
+    },
+    "run1_subject2": {
+      "norm_return": 0.8610809445381165,
+      "steps": 11890,
+      "failed": false
+    },
+    "run1_subject5": {
+      "norm_return": 0.8355792164802551,
+      "steps": 11890,
+      "failed": false
+    },
+    "run2_subject1": {
+      "norm_return": 0.8288722634315491,
+      "steps": 12240,
+      "failed": false
+    },
+    "run2_subject4": {
+      "norm_return": 0.8120998740196228,
+      "steps": 12240,
+      "failed": false
+    },
+    "sprint1_subject2": {
+      "norm_return": 0.8463411331176758,
+      "steps": 13655,
+      "failed": false
+    },
+    "sprint1_subject4": {
+      "norm_return": 0.8091258406639099,
+      "steps": 13655,
+      "failed": false
+    },
+    "walk1_subject1": {
+      "norm_return": 0.894173800945282,
+      "steps": 13065,
+      "failed": false
+    },
+    "walk1_subject2": {
+      "norm_return": 0.8984994292259216,
+      "steps": 13065,
+      "failed": false
+    },
+    "walk1_subject5": {
+      "norm_return": 0.9024581909179688,
+      "steps": 13065,
+      "failed": false
+    },
+    "walk2_subject1": {
+      "norm_return": 0.8965408802032471,
+      "steps": 11908,
+      "failed": false
+    },
+    "walk2_subject3": {
+      "norm_return": 0.8975366950035095,
+      "steps": 11908,
+      "failed": false
+    },
+    "walk2_subject4": {
+      "norm_return": 0.9034413695335388,
+      "steps": 11908,
+      "failed": false
+    },
+    "walk3_subject1": {
+      "norm_return": 0.8654010891914368,
+      "steps": 12330,
+      "failed": false
+    },
+    "walk3_subject2": {
+      "norm_return": 0.9228497743606567,
+      "steps": 12330,
+      "failed": false
+    },
+    "walk3_subject3": {
+      "norm_return": 0.9123145937919617,
+      "steps": 12330,
+      "failed": false
+    },
+    "walk3_subject4": {
+      "norm_return": 0.8917734026908875,
+      "steps": 12330,
+      "failed": false
+    },
+    "walk3_subject5": {
+      "norm_return": 0.8872520923614502,
+      "steps": 12330,
+      "failed": false
+    },
+    "walk4_subject1": {
+      "norm_return": 0.9438817501068115,
+      "steps": 8195,
+      "failed": false
+    }
+  },
+  "iteration": 12000,
+  "checkpoint": "/workspace/Uni-SuperMimic-main/runs/rp1_any4hdmi_gpu0_001/ckpt_012000.pt",
+  "train_wall_h": 4.731384588016404,
+  "eval_seconds": 1140.574232754996,
+  "settings": {
+    "backend": "mjwarp",
+    "each_clip_from_first_frame": true,
+    "observation_action_noise": false,
+    "reset_noise": false,
+    "training_domain_randomization": false
+  }
+}

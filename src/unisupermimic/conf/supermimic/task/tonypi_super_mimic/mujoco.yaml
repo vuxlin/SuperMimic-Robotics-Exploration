@@ -1,0 +1,7 @@
+# @package _global_
+defaults:
+- /task/tonypi_super_mimic/base
+- _self_
+training:
+  task_name: TonyPiSuperMimic
+  sim_backend: mujoco

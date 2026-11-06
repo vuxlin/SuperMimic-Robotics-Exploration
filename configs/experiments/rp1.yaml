@@ -1,0 +1,8 @@
+# Explicit launch overrides; complete recorded configuration: results/rp1/run_config.json
+robot: rp1
+task: rp1_super_mimic/mjwarp
+overrides:
+  - algo.num_envs=4096
+  - algo.iterations=12000
+  - algo.ckpt_every=2000
+  - algo.resume=false

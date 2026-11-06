@@ -1,0 +1,10 @@
+# @package _global_
+defaults:
+- /task/tonypi_super_mimic/base
+- _self_
+training:
+  task_name: TonyPiSuperMimic
+  sim_backend: mjwarp
+env:
+  mjwarp_nconmax: 256
+  mjwarp_njmax: 2048

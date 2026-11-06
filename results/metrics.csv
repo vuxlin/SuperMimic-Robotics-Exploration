@@ -1,0 +1,5 @@
+robot,split,clips,completed,mean_return,training_hours
+g1,training,40,40,0.8694364428520203,5.02503
+rp1,training,40,40,0.8435911536216736,4.73137
+tonypi,training,372,370,0.9896865487098694,4.43366
+tonypi,composition_validation,27,27,0.9935978055000305,

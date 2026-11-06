@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "training_started": false,
+  "items": [
+    {
+      "robot": "g1",
+      "clips": 40,
+      "joints": 29,
+      "action_shape": [
+        2,
+        29
+      ],
+      "finite_policy_action": true,
+      "finite_next_state": true,
+      "source_file": "/workspace/SuperMimic-Robotics-Exploration-clean/src/unisupermimic/tasks/motion_tracking/g1/supermimic/evaluate.py",
+      "elapsed_seconds": 22.705653539160267,
+      "status": "passed"
+    },
+    {
+      "robot": "rp1",
+      "clips": 40,
+      "joints": 28,
+      "action_shape": [
+        2,
+        28
+      ],
+      "finite_policy_action": true,
+      "finite_next_state": true,
+      "source_file": "/workspace/SuperMimic-Robotics-Exploration-clean/src/unisupermimic/tasks/motion_tracking/rp1/supermimic/evaluate.py",
+      "elapsed_seconds": 28.0832044321578,
+      "status": "passed"
+    },
+    {
+      "robot": "tonypi",
+      "clips": 372,
+      "joints": 16,
+      "action_shape": [
+        2,
+        16
+      ],
+      "finite_policy_action": true,
+      "finite_next_state": true,
+      "source_file": "/workspace/SuperMimic-Robotics-Exploration-clean/src/unisupermimic/tasks/motion_tracking/tonypi/supermimic/evaluate.py",
+      "elapsed_seconds": 20.536347904941067,
+      "status": "passed"
+    }
+  ],
+  "note": "Validated renamed robot tasks before moving the unchanged folder into its final location."
+}

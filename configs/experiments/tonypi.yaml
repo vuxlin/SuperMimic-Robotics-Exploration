@@ -1,0 +1,8 @@
+# Explicit launch overrides; complete recorded configuration: results/tonypi/run_config.json
+robot: tonypi
+task: tonypi_super_mimic/mjwarp
+overrides:
+  - algo.num_envs=4096
+  - algo.iterations=12000
+  - algo.ckpt_every=2000
+  - algo.resume=false

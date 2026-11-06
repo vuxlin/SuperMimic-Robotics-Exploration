@@ -1,0 +1,77 @@
+{
+  "checkpoints": [
+    {
+      "robot": "g1",
+      "iteration": 2000,
+      "source_path": "/workspace/Uni-SuperMimic-main/runs/lafan1_gpu0_001/ckpt_002000.pt",
+      "bytes": 108262957,
+      "sha256": "e224b8dbcca6ea60c7fcdfd1df642396c6b70124da954a2b7f9747cbecbf1965",
+      "copied": false
+    },
+    {
+      "robot": "g1",
+      "iteration": 6000,
+      "source_path": "/workspace/Uni-SuperMimic-main/runs/lafan1_gpu0_001/ckpt_006000.pt",
+      "bytes": 108262957,
+      "sha256": "e83a4422e509a06abeeb7ec82623f6b146f0135306d25a29a8910dcf5e758072",
+      "copied": false
+    },
+    {
+      "robot": "g1",
+      "iteration": 12000,
+      "source_path": "/workspace/Uni-SuperMimic-main/runs/lafan1_gpu0_001/ckpt_012000.pt",
+      "bytes": 108262957,
+      "sha256": "944534f5bab1414238c00a4f00a1c9ec542b6fa66f430a83aed08a1ceebb1bd1",
+      "copied": false
+    },
+    {
+      "robot": "rp1",
+      "iteration": 2000,
+      "source_path": "/workspace/Uni-SuperMimic-main/runs/rp1_any4hdmi_gpu0_001/ckpt_002000.pt",
+      "bytes": 107392301,
+      "sha256": "fae0d09d18f7d5c88b2db5cc889992140ad007253ee1da7d948ee02e8db2294c",
+      "copied": false
+    },
+    {
+      "robot": "rp1",
+      "iteration": 6000,
+      "source_path": "/workspace/Uni-SuperMimic-main/runs/rp1_any4hdmi_gpu0_001/ckpt_006000.pt",
+      "bytes": 107392301,
+      "sha256": "1c4ab5b3eaaae787a7e78217205b36ef11516b114b0e206e004de9dd0714de3a",
+      "copied": false
+    },
+    {
+      "robot": "rp1",
+      "iteration": 12000,
+      "source_path": "/workspace/Uni-SuperMimic-main/runs/rp1_any4hdmi_gpu0_001/ckpt_012000.pt",
+      "bytes": 107392301,
+      "sha256": "c9d84f98aadfb85e247f17c647187cff0597b641dbb1ec55e8e6ac5d0855be4b",
+      "copied": false
+    },
+    {
+      "robot": "tonypi",
+      "iteration": 2000,
+      "source_path": "/workspace/Uni-SuperMimic-main/runs/tonypi_v2_sequences_gpu1_001/ckpt_002000.pt",
+      "bytes": 96942125,
+      "sha256": "2944892e4fece1cf933aef6353a4425645fcc322dc72c2d921f2cef4f488d34d",
+      "copied": false
+    },
+    {
+      "robot": "tonypi",
+      "iteration": 6000,
+      "source_path": "/workspace/Uni-SuperMimic-main/runs/tonypi_v2_sequences_gpu1_001/ckpt_006000.pt",
+      "bytes": 96942125,
+      "sha256": "339ff6ccaccb50e3d9bb2077095cf06e8541ba05a1ac7db181366aa796595825",
+      "copied": false
+    },
+    {
+      "robot": "tonypi",
+      "iteration": 12000,
+      "source_path": "/workspace/Uni-SuperMimic-main/runs/tonypi_v2_sequences_gpu1_001/ckpt_012000.pt",
+      "bytes": 96942125,
+      "sha256": "1d4f4ae02743b0e8e37908a76c5398c147cca8b05304665bb2b6b80ffbae0895",
+      "copied": false
+    }
+  ],
+  "note": "Weights remain in original experiment directories. Use scripts/export_checkpoint.py to copy a selected checkpoint."
+}

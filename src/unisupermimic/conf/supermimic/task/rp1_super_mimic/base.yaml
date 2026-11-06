@@ -1,0 +1,263 @@
+# @package _global_
+env:
+  seed: null
+  scene:
+    model_file: src/unisupermimic/assets/robots/rp1/mjcf/scene_supermimic.xml
+    default_keyframe_name: stand
+    entities:
+      robot:
+        root_body_name: base_link
+        joint_names: &id001
+        - left_hip_pitch_joint
+        - left_hip_roll_joint
+        - left_hip_yaw_joint
+        - left_knee_joint
+        - left_ankle_pitch_joint
+        - left_ankle_roll_joint
+        - right_hip_pitch_joint
+        - right_hip_roll_joint
+        - right_hip_yaw_joint
+        - right_knee_joint
+        - right_ankle_pitch_joint
+        - right_ankle_roll_joint
+        - waist_roll_joint
+        - waist_yaw_joint
+        - left_shoulder_pitch_joint
+        - left_shoulder_roll_joint
+        - left_shoulder_yaw_joint
+        - left_elbow_joint
+        - left_wrist_roll_joint
+        - left_wrist_yaw_joint
+        - left_wrist_pitch_joint
+        - right_shoulder_pitch_joint
+        - right_shoulder_roll_joint
+        - right_shoulder_yaw_joint
+        - right_elbow_joint
+        - right_wrist_roll_joint
+        - right_wrist_yaw_joint
+        - right_wrist_pitch_joint
+        actuator_names: *id001
+        body_names:
+        - base_link
+        - left_hip_roll_link
+        - left_knee_link
+        - left_ankle_roll_link
+        - right_hip_roll_link
+        - right_knee_link
+        - right_ankle_roll_link
+        - waist_yaw_link
+        - left_shoulder_roll_link
+        - left_elbow_link
+        - left_wrist_pitch_link
+        - right_shoulder_roll_link
+        - right_elbow_link
+        - right_wrist_pitch_link
+        geom_names:
+        - left_hip_pitch_collision
+        - left_hip_roll_collision
+        - left_hip_yaw_collision
+        - left_knee_upper_collision
+        - left_knee_lower_collision
+        - left_ankle_pitch_collision
+        - left_foot_toe_neg_collision
+        - left_foot_outer_neg_collision
+        - left_foot_inner_neg_collision
+        - left_foot_center_collision
+        - left_foot_inner_pos_collision
+        - left_foot_outer_pos_collision
+        - left_foot_toe_pos_collision
+        - right_hip_pitch_collision
+        - right_hip_roll_collision
+        - right_hip_yaw_collision
+        - right_knee_upper_collision
+        - right_knee_lower_collision
+        - right_ankle_pitch_collision
+        - right_foot_toe_neg_collision
+        - right_foot_outer_neg_collision
+        - right_foot_inner_neg_collision
+        - right_foot_center_collision
+        - right_foot_inner_pos_collision
+        - right_foot_outer_pos_collision
+        - right_foot_toe_pos_collision
+        - waist_roll_neg_y_collision
+        - waist_roll_pos_y_collision
+        - torso_lower_collision
+        - torso_middle_collision
+        - torso_upper_collision
+        - left_shoulder_pitch_collision
+        - left_shoulder_roll_collision
+        - left_shoulder_yaw_collision
+        - left_elbow_collision
+        - left_wrist_roll_collision
+        - left_wrist_yaw_collision
+        - left_wrist_pitch_collision
+        - right_shoulder_pitch_collision
+        - right_shoulder_roll_collision
+        - right_shoulder_yaw_collision
+        - right_elbow_collision
+        - right_wrist_roll_collision
+        - right_wrist_yaw_collision
+        - right_wrist_pitch_collision
+      ground:
+        geom_names:
+        - floor
+  sim_dt: 0.005
+  ctrl_dt: 0.02
+  max_episode_seconds: 10.0
+  auto_reset: true
+  scale_rewards_by_dt: false
+  observations:
+    policy:
+      enable_corruption: false
+      terms:
+        obs:
+          func: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.supermimic_obs
+          params:
+            command_name: motion
+    future:
+      enable_corruption: false
+      terms:
+        goal:
+          func: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.supermimic_goal
+          params:
+            command_name: motion
+            num_frames: 10
+  actions:
+    joint_pos:
+      _target_: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.SuperMimicActionCfg
+      entity_name: robot
+      command_name: motion
+  commands:
+    motion:
+      _target_: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.SuperMimicCommandCfg
+      entity_name: robot
+      mjcf_path: src/unisupermimic/assets/robots/rp1/mjcf/supermimic.xml
+      eval_mode: false
+      gamma: 0.99
+      src_fps: 50.0
+      reset_noise: true
+      max_episode_steps: 500
+      goal_frames: 10
+      context_dim: 32
+      w_amp: 0.0
+      amp_tol: 0.02
+      amp_scale: 0.5
+      amp_min_height: 0.8
+      amp_ankles:
+      - 3
+      - 6
+      w_speed: 0.0
+      speed_min: 2.0
+      speed_tol: 0.3
+      speed_scale: 1.5
+      speed_bodies:
+      - 3
+      - 6
+      - 9
+      - 11
+      resampling_time_range:
+      - 1.0e9
+      - 1.0e9
+      motion_files:
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/dance1_subject1.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/dance1_subject2.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/dance1_subject3.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/dance2_subject1.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/dance2_subject2.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/dance2_subject3.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/dance2_subject4.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/dance2_subject5.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fallAndGetUp1_subject1.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fallAndGetUp1_subject4.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fallAndGetUp1_subject5.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fallAndGetUp2_subject2.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fallAndGetUp2_subject3.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fallAndGetUp3_subject1.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fight1_subject2.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fight1_subject3.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fight1_subject5.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fightAndSports1_subject1.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/fightAndSports1_subject4.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/jumps1_subject1.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/jumps1_subject2.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/jumps1_subject5.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/run1_subject2.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/run1_subject5.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/run2_subject1.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/run2_subject4.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/sprint1_subject2.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/sprint1_subject4.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk1_subject1.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk1_subject2.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk1_subject5.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk2_subject1.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk2_subject3.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk2_subject4.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk3_subject1.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk3_subject2.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk3_subject3.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk3_subject4.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk3_subject5.csv
+      - src/unisupermimic/assets/motions/rp1/lafan1_any4hdmi_40/walk4_subject1.csv
+  events:
+    startup_context:
+      _target_: unilab.managers.EventTermCfg
+      func: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.SuperMimicContextEvent
+      mode: startup
+      params:
+        command_name: motion
+        asset_cfg:
+          _target_: unilab.managers.SceneEntityCfg
+          name: robot
+        ground_asset_cfg:
+          _target_: unilab.managers.SceneEntityCfg
+          name: ground
+          geom_names:
+          - floor
+    reset_context:
+      _target_: unilab.managers.EventTermCfg
+      func: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.SuperMimicContextEvent
+      mode: reset
+      params:
+        command_name: motion
+        asset_cfg:
+          _target_: unilab.managers.SceneEntityCfg
+          name: robot
+        ground_asset_cfg:
+          _target_: unilab.managers.SceneEntityCfg
+          name: ground
+          geom_names:
+          - floor
+    joint_offsets:
+      _target_: unilab.managers.EventTermCfg
+      func: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.SuperMimicJointOffsetEvent
+      mode: reset
+      params:
+        command_name: motion
+  terminations:
+    hard:
+      _target_: unilab.managers.TerminationTermCfg
+      func: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.supermimic_termination
+      params:
+        command_name: motion
+    timeout:
+      _target_: unilab.managers.TerminationTermCfg
+      func: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.supermimic_timeout
+      time_out: true
+      params:
+        command_name: motion
+    clip_end:
+      _target_: unilab.managers.TerminationTermCfg
+      func: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.supermimic_clip_end
+      time_out: true
+      params:
+        command_name: motion
+  policy_observation_group: policy
+  critic_observation_group: future
+reward:
+  tracking:
+    _target_: unilab.managers.RewardTermCfg
+    func: unisupermimic.tasks.motion_tracking.rp1.supermimic.manager_terms.supermimic_reward
+    weight: 1.0
+    params:
+      command_name: motion
