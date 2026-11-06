@@ -16,9 +16,7 @@
 
 29 个受控关节；使用 [LAFAN1 Retargeting Dataset](https://huggingface.co/datasets/lvhaidong/LAFAN1_Retargeting_Dataset) 的 40 段动作。
 
-<video controls preload="none" width="100%" poster="assets/images/G1_12grid_preview_30s.jpg" src="assets/videos/G1_12grid_preview_30s.mp4">
-  <a href="assets/videos/G1_12grid_preview_30s.mp4"><img src="assets/images/G1_12grid_preview_30s.jpg" alt="G1 · 十二宫格动作展示" width="100%"></a>
-</video>
+[![G1 · 十二宫格动作展示](assets/images/G1_12grid_preview_30s.jpg)](assets/videos/G1_12grid_preview_30s.mp4)
 
 [▶ G1 · 十二宫格动作展示](assets/videos/G1_12grid_preview_30s.mp4)
 
@@ -26,9 +24,7 @@
 
 28 个受控关节；使用 [any4hdmi-rp1-lafan](https://huggingface.co/datasets/elijahgalahad/any4hdmi-rp1-lafan) 中对应的 40 段 RP1 重定向动作。
 
-<video controls preload="none" width="100%" poster="assets/images/RP1_12grid_preview_30s.jpg" src="assets/videos/RP1_12grid_preview_30s.mp4">
-  <a href="assets/videos/RP1_12grid_preview_30s.mp4"><img src="assets/images/RP1_12grid_preview_30s.jpg" alt="RP1 · 十二宫格动作展示" width="100%"></a>
-</video>
+[![RP1 · 十二宫格动作展示](assets/images/RP1_12grid_preview_30s.jpg)](assets/videos/RP1_12grid_preview_30s.mp4)
 
 [▶ RP1 · 十二宫格动作展示](assets/videos/RP1_12grid_preview_30s.mp4)
 
@@ -36,9 +32,7 @@
 
 16 个身体关节，头部与夹爪固定。参考动作由 `.d6a` 动作组在仿真中采集，包含单动作、站姿过渡、步态循环与混合序列；训练集 372 条轨迹，组合验证集 27 条轨迹。
 
-<video controls preload="none" width="100%" poster="assets/images/TonyPi_12grid_preview_30s.jpg" src="assets/videos/TonyPi_12grid_preview_30s.mp4">
-  <a href="assets/videos/TonyPi_12grid_preview_30s.mp4"><img src="assets/images/TonyPi_12grid_preview_30s.jpg" alt="TonyPi · 十二宫格动作展示" width="100%"></a>
-</video>
+[![TonyPi · 十二宫格动作展示](assets/images/TonyPi_12grid_preview_30s.jpg)](assets/videos/TonyPi_12grid_preview_30s.mp4)
 
 [▶ TonyPi · 十二宫格动作展示](assets/videos/TonyPi_12grid_preview_30s.mp4)
 
@@ -59,9 +53,7 @@ TonyPi 已完成仿真训练与评估，学习策略的真机部署处于准备�
 
 30 秒四宫格对比。上排 G1、下排 RP1；左列为 **2,000** 次更新，右列为 **12,000** 次更新。
 
-<video controls preload="none" width="100%" poster="assets/images/comparison_4panel.jpg" src="assets/videos/comparison_4panel.mp4">
-  <a href="assets/videos/comparison_4panel.mp4"><img src="assets/images/comparison_4panel.jpg" alt="G1 / RP1 · 早期与最终 Policy" width="100%"></a>
-</video>
+[![G1 / RP1 · 早期与最终 Policy](assets/images/comparison_4panel.jpg)](assets/videos/comparison_4panel.mp4)
 
 [▶ G1 / RP1 · 早期与最终 Policy](assets/videos/comparison_4panel.mp4)
 
@@ -69,9 +61,7 @@ TonyPi 已完成仿真训练与评估，学习策略的真机部署处于准备�
 
 完整的 `fightAndSports1_subject1` 动作，约 245 秒。上排 G1、下排 RP1；从左至右为 **2,000 / 6,000 / 12,000** 次更新。
 
-<video controls preload="none" width="100%" poster="assets/images/comparison_6panel.jpg" src="assets/videos/comparison_6panel.mp4">
-  <a href="assets/videos/comparison_6panel.mp4"><img src="assets/images/comparison_6panel.jpg" alt="G1 / RP1 · 三阶段完整动作对比" width="100%"></a>
-</video>
+[![G1 / RP1 · 三阶段完整动作对比](assets/images/comparison_6panel.jpg)](assets/videos/comparison_6panel.mp4)
 
 [▶ G1 / RP1 · 三阶段完整动作对比](assets/videos/comparison_6panel.mp4)
 
@@ -79,9 +69,7 @@ TonyPi 已完成仿真训练与评估，学习策略的真机部署处于准备�
 
 同一段完整的 41.44 秒参考动作，从左至右为 **2,000 / 6,000 / 12,000** 次更新。
 
-<video controls preload="none" width="100%" poster="assets/images/tonypi_progress.jpg" src="assets/videos/tonypi_progress.mp4">
-  <a href="assets/videos/tonypi_progress.mp4"><img src="assets/images/tonypi_progress.jpg" alt="TonyPi · 三阶段完整动作对比" width="100%"></a>
-</video>
+[![TonyPi · 三阶段完整动作对比](assets/images/tonypi_progress.jpg)](assets/videos/tonypi_progress.mp4)
 
 [▶ TonyPi · 三阶段完整动作对比](assets/videos/tonypi_progress.mp4)
 

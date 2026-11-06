@@ -16,9 +16,7 @@ Twelve-motion grids from the final policies (12,000 updates). Each preview is 30
 
 29 controlled joints; 40 motions from the [LAFAN1 Retargeting Dataset](https://huggingface.co/datasets/lvhaidong/LAFAN1_Retargeting_Dataset).
 
-<video controls preload="none" width="100%" poster="assets/images/G1_12grid_preview_30s.jpg" src="assets/videos/G1_12grid_preview_30s.mp4">
-  <a href="assets/videos/G1_12grid_preview_30s.mp4"><img src="assets/images/G1_12grid_preview_30s.jpg" alt="G1 · twelve-motion showcase" width="100%"></a>
-</video>
+[![G1 · twelve-motion showcase](assets/images/G1_12grid_preview_30s.jpg)](assets/videos/G1_12grid_preview_30s.mp4)
 
 [▶ G1 · twelve-motion showcase](assets/videos/G1_12grid_preview_30s.mp4)
 
@@ -26,9 +24,7 @@ Twelve-motion grids from the final policies (12,000 updates). Each preview is 30
 
 28 controlled joints; 40 corresponding RP1 motions from [any4hdmi-rp1-lafan](https://huggingface.co/datasets/elijahgalahad/any4hdmi-rp1-lafan).
 
-<video controls preload="none" width="100%" poster="assets/images/RP1_12grid_preview_30s.jpg" src="assets/videos/RP1_12grid_preview_30s.mp4">
-  <a href="assets/videos/RP1_12grid_preview_30s.mp4"><img src="assets/images/RP1_12grid_preview_30s.jpg" alt="RP1 · twelve-motion showcase" width="100%"></a>
-</video>
+[![RP1 · twelve-motion showcase](assets/images/RP1_12grid_preview_30s.jpg)](assets/videos/RP1_12grid_preview_30s.mp4)
 
 [▶ RP1 · twelve-motion showcase](assets/videos/RP1_12grid_preview_30s.mp4)
 
@@ -36,9 +32,7 @@ Twelve-motion grids from the final policies (12,000 updates). Each preview is 30
 
 16 body joints, with the head and grippers fixed. References are captured from `.d6a` action groups in simulation, including individual actions, standing transitions, gait cycles and mixed sequences: 372 training trajectories and 27 composition-validation trajectories.
 
-<video controls preload="none" width="100%" poster="assets/images/TonyPi_12grid_preview_30s.jpg" src="assets/videos/TonyPi_12grid_preview_30s.mp4">
-  <a href="assets/videos/TonyPi_12grid_preview_30s.mp4"><img src="assets/images/TonyPi_12grid_preview_30s.jpg" alt="TonyPi · twelve-motion showcase" width="100%"></a>
-</video>
+[![TonyPi · twelve-motion showcase](assets/images/TonyPi_12grid_preview_30s.jpg)](assets/videos/TonyPi_12grid_preview_30s.mp4)
 
 [▶ TonyPi · twelve-motion showcase](assets/videos/TonyPi_12grid_preview_30s.mp4)
 
@@ -59,9 +53,7 @@ Simulation training and evaluation are complete. Deployment of the learned polic
 
 A 30-second four-panel comparison. G1 is on top and RP1 below; the left column uses **2,000** updates and the right uses **12,000**.
 
-<video controls preload="none" width="100%" poster="assets/images/comparison_4panel.jpg" src="assets/videos/comparison_4panel.mp4">
-  <a href="assets/videos/comparison_4panel.mp4"><img src="assets/images/comparison_4panel.jpg" alt="G1 / RP1 · early and final policies" width="100%"></a>
-</video>
+[![G1 / RP1 · early and final policies](assets/images/comparison_4panel.jpg)](assets/videos/comparison_4panel.mp4)
 
 [▶ G1 / RP1 · early and final policies](assets/videos/comparison_4panel.mp4)
 
@@ -69,9 +61,7 @@ A 30-second four-panel comparison. G1 is on top and RP1 below; the left column u
 
 The full `fightAndSports1_subject1` motion, approximately 245 seconds. G1 is on top and RP1 below; columns show **2,000 / 6,000 / 12,000** updates from left to right.
 
-<video controls preload="none" width="100%" poster="assets/images/comparison_6panel.jpg" src="assets/videos/comparison_6panel.mp4">
-  <a href="assets/videos/comparison_6panel.mp4"><img src="assets/images/comparison_6panel.jpg" alt="G1 / RP1 · full motion at three stages" width="100%"></a>
-</video>
+[![G1 / RP1 · full motion at three stages](assets/images/comparison_6panel.jpg)](assets/videos/comparison_6panel.mp4)
 
 [▶ G1 / RP1 · full motion at three stages](assets/videos/comparison_6panel.mp4)
 
@@ -79,9 +69,7 @@ The full `fightAndSports1_subject1` motion, approximately 245 seconds. G1 is on 
 
 The same complete 41.44-second reference motion at **2,000 / 6,000 / 12,000** updates, from left to right.
 
-<video controls preload="none" width="100%" poster="assets/images/tonypi_progress.jpg" src="assets/videos/tonypi_progress.mp4">
-  <a href="assets/videos/tonypi_progress.mp4"><img src="assets/images/tonypi_progress.jpg" alt="TonyPi · full motion at three stages" width="100%"></a>
-</video>
+[![TonyPi · full motion at three stages](assets/images/tonypi_progress.jpg)](assets/videos/tonypi_progress.mp4)
 
 [▶ TonyPi · full motion at three stages](assets/videos/tonypi_progress.mp4)
 
