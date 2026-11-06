@@ -16,25 +16,19 @@ Twelve-motion grids from the final policies (12,000 updates). Each preview is 30
 
 29 controlled joints; 40 motions from the [LAFAN1 Retargeting Dataset](https://huggingface.co/datasets/lvhaidong/LAFAN1_Retargeting_Dataset).
 
-[![G1 · twelve-motion showcase](assets/images/G1_12grid_preview_30s.jpg)](assets/videos/G1_12grid_preview_30s.mp4)
-
-[▶ G1 · twelve-motion showcase](assets/videos/G1_12grid_preview_30s.mp4)
+https://github.com/user-attachments/assets/109bbeb8-ed9c-4491-983a-3df4fb7368fd
 
 ### RP1
 
 28 controlled joints; 40 corresponding RP1 motions from [any4hdmi-rp1-lafan](https://huggingface.co/datasets/elijahgalahad/any4hdmi-rp1-lafan).
 
-[![RP1 · twelve-motion showcase](assets/images/RP1_12grid_preview_30s.jpg)](assets/videos/RP1_12grid_preview_30s.mp4)
-
-[▶ RP1 · twelve-motion showcase](assets/videos/RP1_12grid_preview_30s.mp4)
+https://github.com/user-attachments/assets/b47e135b-a7ff-4f48-82e7-006238484897
 
 ### TonyPi
 
 16 body joints, with the head and grippers fixed. References are captured from `.d6a` action groups in simulation, including individual actions, standing transitions, gait cycles and mixed sequences: 372 training trajectories and 27 composition-validation trajectories.
 
-[![TonyPi · twelve-motion showcase](assets/images/TonyPi_12grid_preview_30s.jpg)](assets/videos/TonyPi_12grid_preview_30s.mp4)
-
-[▶ TonyPi · twelve-motion showcase](assets/videos/TonyPi_12grid_preview_30s.mp4)
+https://github.com/user-attachments/assets/115c12ee-9c7d-4c07-b82f-e3151dc178d8
 
 <details>
 <summary>TonyPi joint mapping</summary>
@@ -53,25 +47,19 @@ Simulation training and evaluation are complete. Deployment of the learned polic
 
 A 30-second four-panel comparison. G1 is on top and RP1 below; the left column uses **2,000** updates and the right uses **12,000**.
 
-[![G1 / RP1 · early and final policies](assets/images/comparison_4panel.jpg)](assets/videos/comparison_4panel.mp4)
-
-[▶ G1 / RP1 · early and final policies](assets/videos/comparison_4panel.mp4)
+https://github.com/user-attachments/assets/b966a476-acca-4972-989a-7dfe72ccfcd0
 
 ### G1 / RP1: three training stages
 
 The full `fightAndSports1_subject1` motion, approximately 245 seconds. G1 is on top and RP1 below; columns show **2,000 / 6,000 / 12,000** updates from left to right.
 
-[![G1 / RP1 · full motion at three stages](assets/images/comparison_6panel.jpg)](assets/videos/comparison_6panel.mp4)
-
-[▶ G1 / RP1 · full motion at three stages](assets/videos/comparison_6panel.mp4)
+https://github.com/user-attachments/assets/48540b90-8fec-4346-96e3-512d2c78c162
 
 ### TonyPi: three training stages
 
 The same complete 41.44-second reference motion at **2,000 / 6,000 / 12,000** updates, from left to right.
 
-[![TonyPi · full motion at three stages](assets/images/tonypi_progress.jpg)](assets/videos/tonypi_progress.mp4)
-
-[▶ TonyPi · full motion at three stages](assets/videos/tonypi_progress.mp4)
+https://github.com/user-attachments/assets/977ab5fa-9fda-4a81-890b-80a4cd0b31f0
 
 Solid robots show the policy; blue robots show the reference, aligned to the policy in XY for pose comparison. Global position errors are computed from unaligned trajectories.
 
